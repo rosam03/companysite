@@ -18,43 +18,46 @@
   }
 }
 */
- 
+
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "linecons";
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
+
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
- 
+
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-     
+
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
- 
+
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: .2em;
- 
+
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
- 
+
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
+
+.icon-star:before { content: '\e804'; } /* '' */
+.icon-doc:before { content: '\e813'; } /* '' */
+.icon-clock:before { content: '\e822'; } /* '' */
+
 .icon-music:before { content: '\e800'; } /* '' */
 .icon-search:before { content: '\e801'; } /* '' */
 .icon-mail:before { content: '\e802'; } /* '' */
 .icon-heart:before { content: '\e803'; } /* '' */
-.icon-star:before { content: '\e804'; } /* '' */
 .icon-user:before { content: '\e805'; } /* '' */
 .icon-videocam:before { content: '\e806'; } /* '' */
 .icon-camera:before { content: '\e807'; } /* '' */
@@ -69,7 +72,6 @@
 .icon-location:before { content: '\e810'; } /* '' */
 .icon-cup:before { content: '\e811'; } /* '' */
 .icon-trash:before { content: '\e812'; } /* '' */
-.icon-doc:before { content: '\e813'; } /* '' */
 .icon-database:before { content: '\e814'; } /* '' */
 .icon-key:before { content: '\e815'; } /* '' */
 .icon-megaphone:before { content: '\e816'; } /* '' */
@@ -84,7 +86,6 @@
 .icon-desktop:before { content: '\e81f'; } /* '' */
 .icon-tv:before { content: '\e820'; } /* '' */
 .icon-lightbulb:before { content: '\e821'; } /* '' */
-.icon-clock:before { content: '\e822'; } /* '' */
 .icon-sound:before { content: '\e823'; } /* '' */
 .icon-calendar:before { content: '\e824'; } /* '' */
 .icon-params:before { content: '\e825'; } /* '' */

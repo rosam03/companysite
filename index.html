@@ -5,7 +5,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, maximum-scale=1">
 	<title>Homepage</title>
-	<link rel="icon" href="favicon.png" type="image/png">
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="css/linecons.css" rel="stylesheet" type="text/css">
@@ -24,15 +26,22 @@
 	======================================================= -->
 
 	<script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
 
 <script type="text/javascript">
 	$(document).ready(function() {
 		$(".res-nav_click").click(function(){
 	    	$(".nav ul.toggle").toggle();
 				});
-				$(".nav ul.toggle").click(function(){
-						$(".nav ul.toggle").toggle();
-						});
+		$(".nav ul.toggle").click(function(){
+				$(".nav ul.toggle").toggle();
+				});
+			$(window).scroll(function(){
+				if($(".nav ul.toggle").css('display') == "block"){
+					$(".nav ul.toggle").toggle();
+					console.log("success");
+				}
+			})
 	});
 </script>
 
@@ -63,7 +72,7 @@
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
-				<a class="res-nav_click animated wobble wow"><i class="fa-bars"></i></a> </div>
+				<a class="res-nav_click animated wobble "><i class="fa-bars"></i></a> </div>
 		</div>
 	</header>
 	<!--Header_section-->
@@ -71,13 +80,13 @@
 
 	<!--Top_content-->
 	<section id="top_content" class="top_cont_outer">
-		<div><img src="images/alllogo.png" alt="" width="100%;"></div>
+		<div class="fadeInUp animated numbers"><img src="images/alllogo.png" alt="" width="100%;"></div>
 		<div class="top_cont_inner">
 			<div class="container">
 				<div class="top_content">
 					<div class="row">
 						<div class="col-lg-5 col-sm-7">
-							<div class="top_left_cont flipInY wow animated">
+							<div class="top_left_cont flipInY animated">
 								<h3>Let us</h3>
 								<h2>take care of the cleaning</h2>
 								<p> Nature Cleaning Services is a professional carpet cleaning business founded in April 1996, providing residential and commercial services to customers in the lower mainland. Our services include: </p>
@@ -97,7 +106,7 @@
 	</section>
 	<!--Top_content-->
 
-	<div><img src="http://naturecleaning.ca/nivo-slider/demo/images/slide3.jpg"> </div>
+	<div class="jumbo_ad"><img src="http://naturecleaning.ca/nivo-slider/demo/images/slide3.jpg"> </div>
 
 
 	<!--Service-->
@@ -109,23 +118,23 @@
 				<div class="row">
 					<div class="col-lg-4">
 						<div class="service_block">
-							<div class="service_icon icon2 delay-03s animated wow  zoomIn"> <span><i class="fa-child"></i></span> </div>
-							<h3 class="animated fadeInUp wow">Allergy and child friendly</h3>
-							<p class="animated fadeInDown wow">Biodegradable enzyme detergent products make your home environment safe and friendly and is best for allergy sufferers and homes with young children.</p>
+							<div class="service_icon icon2 animated zoomIn"> <span><i class="fa-child"></i></span> </div>
+							<h3 class="animated fadeInUp">Allergy and child friendly</h3>
+							<p class="animated fadeInDown">Biodegradable enzyme detergent products make your home environment safe and friendly and is best for allergy sufferers and homes with young children.</p>
 						</div>
 					</div>
 					<div class="col-lg-4">
 						<div class="service_block">
-							<div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa-truck"></i></span> </div>
-							<h3 class="animated fadeInUp wow">Deep steam cleaning</h3>
-							<p class="animated fadeInDown wow">No harmful and unhealthy residue left after rinsing the carpet with the help of our strong steam cleaning system. </p>
+							<div class="service_icon icon2  delay-03s animated zoomIn"> <span><i class="fa-truck"></i></span> </div>
+							<h3 class="animated fadeInUp">Deep steam cleaning</h3>
+							<p class="animated fadeInDown">No harmful and unhealthy residue left after rinsing the carpet with the help of our strong steam cleaning system. </p>
 						</div>
 					</div>
 					<div class="col-lg-4">
 						<div class="service_block">
-							<div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa-leaf"></i></span> </div>
-							<h3 class="animated fadeInUp wow">Non toxic supplies</h3>
-							<p class="animated fadeInDown wow">No phosphates, non-toxic cleaning supplies is the right choice to protect human and pet lives.</p>
+							<div class="service_icon icon2  delay-03s animated zoomIn"> <span><i class="fa-leaf"></i></span> </div>
+							<h3 class="animated fadeInUp">Non toxic supplies</h3>
+							<p class="animated fadeInDown">No phosphates, non-toxic cleaning supplies is the right choice to protect human and pet lives.</p>
 						</div>
 					</div>
 				</div>
@@ -134,7 +143,7 @@
 	</section>
 	<!--Service-->
 
-	<div><img src="http://naturecleaning.ca/nivo-slider/demo/images/slide2.jpg"> </div>
+	<div class="jumbo_ad"><img src="http://naturecleaning.ca/nivo-slider/demo/images/slide2.jpg"> </div>
 
 
 	<section id="work_outer">
@@ -145,40 +154,46 @@
 				<h2>About Us</h2>
 				<div class="work_section">
 					<div class="row">
-						<div class="col-lg-6 col-sm-6 wow fadeInLeft delay-05s">
-							<div class="service-list">
+						<div class="col-lg-12 col-sm-12">
+						<div class=" fadeInLeft delay-05s">
+							<div class="service-list" id="about">
 								<div class="service-list-col1"> <i class="icon-doc"></i> </div>
 								<div class="service-list-col2">
 
 									<p>Nature Cleaning Services is a professional carpet cleaning business which has been established since April 1996, providing residential and commercial services in the lower mainland for over 20 years. Our all natural environmentally friendly products make this the best method for allergy sufferers and homes with young children. Using a truck mounted steam cleaning system, Nature Cleaning Services ensures quick and effective drying times.</p>
 								</div>
 							</div>
-							<div class="service-list">
+						</div>
+					</div>
+				</div>
+						<div class="container">
+						<div class="row">
+							<div class="service-list col-lg-6 col-sm-6">
 								<div class="service-list-col1"> <i class="icon-clock"></i> </div>
 								<div class="service-list-col2">
 									<h3>24/7 emergency services</h3>
 									<p>Dealing with an unexpected situation? No problem. We offer 24 hour emergency services to keep your carpets looking and smelling clean. </p>
 								</div>
 							</div>
-							<div class="service-list">
+							<div class="service-list col-lg-6 col-sm-6">
 								<div class="service-list-col1"> <i class="icon-star"></i> </div>
 								<div class="service-list-col2">
 									<h3>BBB Accredited Business</h3>
 									<p>We strive to make our customers happy, and our A+ record with the Better Business Bureau shows that. </p>
 								</div>
 							</div>
-							<div class="work_bottom"> <span>Have a question?</span> <a href="#contact" class="contact_btn">Contact Us</a> </div>
 						</div>
-						<figure class="col-lg-6 col-sm-6  text-right wow fadeInUp delay-02s"> </figure>
 					</div>
+							<div class="work_bottom "> <span>Have a question?</span> <a href="#contact" class="contact_btn">Contact Us</a> </div>
+
 				</div>
-			</div>
+
 			<!--<div class="work_pic"><img src="img/dashboard_pic.png" alt=""></div>-->
 		</div>
 	</section>
 	<!--main-section-end-->
 
-	<div><img src="http://naturecleaning.ca/nivo-slider/demo/images/slide5.jpg"> </div>
+	<div class="jumbo_ad"><img src="http://naturecleaning.ca/nivo-slider/demo/images/slide4.jpg"> </div>
 
 
 	<!--Service-->
@@ -188,54 +203,53 @@
 			<h2>Services</h2>
 			<div class="service_area">
 				<div class="row">
-					<div class="col-lg-4">
+					<div class="col-lg-12">
 						<div class="service_block">
-							<div class="service_icon icon1 delay-03s animated wow  zoomIn"> <span><i class="fa-home"></i></span> </div>
-							<h3 class="animated fadeInUp wow">Carpet cleaning</h3>
-							<p class="animated fadeInDown wow">Our truck-mounted steam-cleaning unit works effectively and quickly to remove stains and traffic from carpet. Drying times start from one hour depending on many factors including the condition and type of carpet, weather, and more. Our method of cleaning provides you with a healthy bacteria-free environment. We use a biodegradable enzyme detergent that is safe for allergy sufferers and homes with young children and pets. This non-toxic enzyme detergent quickly breaks down bacteria's and odor causing compounds.</p>
+							<div class="service_icon icon1 delay-03s animated  zoomIn"> <span><i class="fa-home"></i></span> </div>
+							<h3 class="animated fadeInUp ">Carpet cleaning</h3>
+							<p class="animated fadeInDown ">Our truck-mounted steam-cleaning unit works effectively and quickly to remove stains and traffic from carpet. Drying times start from one hour depending on many factors including the condition and type of carpet, weather, and more. Our method of cleaning provides you with a healthy bacteria-free environment. We use a biodegradable enzyme detergent that is safe for allergy sufferers and homes with young children and pets. This non-toxic enzyme detergent quickly breaks down bacteria's and odor causing compounds.</p>
 						</div>
 					</div>
 					<div class="col-lg-4">
 						<div class="service_block">
-							<h3 class="animated fadeInUp wow">Mattress cleaning</h3>
-							<p class="animated fadeInDown wow">
+							<h3 class="animated fadeInUp ">Mattress cleaning</h3>
+							<p class="animated fadeInDown ">
 Nature Cleaning Services cleans and deodorizes mattresses to effectively remove unhealthy allergens and dirt so you can sleep comfortably. Don't let the bedbugs bite! </p>
 						</div>
 					</div>
 					<div class="col-lg-4">
 						<div class="service_block">
-							<h3 class="animated fadeInUp wow">Carpet and Upholstery Protector</h3>
-							<p class="animated fadeInDown wow">
+							<h3 class="animated fadeInUp ">Carpet and Upholstery Protector</h3>
+							<p class="animated fadeInDown ">
 We use Scotchgard products to prevent stains in fabric and keep your carpet and upholstery looking the best they can. Using this protector enhances and maintains the appearance of your carpet and upholstery. </br></br> Upholstery cleaning is just as necessary as carpet cleaning. Because upholstery also collects dust and allergens, it is important to maintain their sanitation. We clean most natural and synthetic fabrics. (Cotton, linen, wool, microfiber, polyester, etc.) Sofas, armchairs, love seats, dining and office chairs, ottomans, sectional couches, and more.</p>
 						</div>
 					</div>
 
 					<div class="col-lg-4">
 						<div class="service_block">
-							<div class="service_icon icon2  delay-03s animated wow zoomIn"> <span><i class="fa-search"></i></span> </div>
 							<h3>Stain removal specialist</h3>
 							<p>Some stains are much harder to remove than others, and even harder to remove the longer they go untreated. We have been successful with nail polish, ink, wine, coffee, tea, make-up, paint, grease, tar, wax stains, and more. Avoid trying to clean the stain yourself as the chemicals in the products you use may make it harder to remove or even worsen the condition. Although we cannot guarantee the stain will be removed completely, we will try our best to remove as much of the stain as possible. We also clean serious stains: wine, vomit, urine, blood, feces, etc.</p>
 						</div>
 					</div>
-					<div class="col-lg-4">
+					<div class="col-lg-12">
 						<div class="service_block">
-							<div class="service_icon icon1 delay-03s animated wow zoomIn"> <span><i class="fa-building"></i></span> </div>
-							<h3 class="animated fadeInUp wow">Commercial carpet cleaning</h3>
-							<p class="animated fadeInDown wow">Nature Cleaning Services also provides commercial carpet and upholstery cleaning. Our truck-mounted steam-cleaning unit does an affective job at cleaning your business environment. Have a high-rise or inconvenient area that needs to be cleaned? Not a problem, Nature Cleaning Services uses the latest portable unit that contains its own heat system to give you a superior result. Offices, restaurants, hotels, apartments, condos, strata's, and more. </p>
+							<div class="service_icon icon1 delay-03s animated zoomIn"> <span><i class="fa-building"></i></span> </div>
+							<h3 class="animated fadeInUp ">Commercial carpet cleaning</h3>
+							<p class="animated fadeInDown ">Nature Cleaning Services also provides commercial carpet and upholstery cleaning. Our truck-mounted steam-cleaning unit does an affective job at cleaning your business environment. Have a high-rise or inconvenient area that needs to be cleaned? Not a problem, Nature Cleaning Services uses the latest portable unit that contains its own heat system to give you a superior result. Offices, restaurants, hotels, apartments, condos, strata's, and more. </p>
 						</div>
 					</div>
-					<div class="col-lg-4">
+					<div class="col-lg-12">
 						<div class="service_block">
-							<div class="service_icon icon2 delay-03s animated wow  zoomIn"> <span><i class="fa-crop"></i></span> </div>
-							<h3 class="animated fadeInUp wow">Tile grout cleaning</h3>
-							<p class="animated fadeInDown wow">Text here</p>
+							<div class="service_icon icon2 delay-03s animated  zoomIn"> <span><i class="fa-crop"></i></span> </div>
+							<h3 class="animated fadeInUp ">Tile grout cleaning</h3>
+							<p class="animated fadeInDown ">Text here</p>
 						</div>
 					</div>
-					<div class="col-lg-4">
+					<div class="col-lg-12">
 						<div class="service_block">
-							<div class="service_icon icon1  delay-03s animated wow zoomIn"> <span><i class="fa-car"></i></span> </div>
-							<h3 class="animated fadeInUp wow">Vehicle and boat interior</h3>
-							<p class="animated fadeInDown wow">Let us take care of the upholstery and carpet in your vehicle or boat. Biodegradable enzyme detergents are also used when we clean your automobile. Every ride will be more enjoyable when you know your sitting in a healthy, safe, and clean vehicle. </p>
+							<div class="service_icon icon1  delay-03s animated zoomIn"> <span><i class="fa-car"></i></span> </div>
+							<h3 class="animated fadeInUp ">Vehicle and boat interior</h3>
+							<p class="animated fadeInDown ">Let us take care of the upholstery and carpet in your vehicle or boat. Biodegradable enzyme detergents are also used when we clean your automobile. Every ride will be more enjoyable when you know your sitting in a healthy, safe, and clean vehicle. </p>
 						</div>
 					</div>
 				</div>
@@ -246,8 +260,6 @@ We use Scotchgard products to prevent stains in fabric and keep your carpet and 
 
 	<!--new_portfolio-->
 
-	<div><img src="http://naturecleaning.ca/nivo-slider/demo/images/slide4.jpg"> </div>
-
 	<!-- Portfolio -->
 	<section id="Portfolio" class="content">
 		</br></br></br></br>
@@ -257,7 +269,7 @@ We use Scotchgard products to prevent stains in fabric and keep your carpet and 
 
 			<!-- Section Title -->
 			<div class="section-title">
-				<h2>Portfolio</h2>
+				<h2>Before and After Photos</h2>
 			</div>
 			<!--/Section Title -->
 
@@ -266,135 +278,42 @@ We use Scotchgard products to prevent stains in fabric and keep your carpet and 
 
 		<div class="portfolio-top"></div>
 
-		<!-- Portfolio Plus Filters -->
+		<!-- Portfolio row -->
 		<div class="portfolio">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			    <li data-target="#myCarousel" data-slide-to="1"></li>
+			    <li data-target="#myCarousel" data-slide-to="2"></li>
+			  </ol>
 
-			<!-- Portfolio Filters -->
-			<div id="filters" class="sixteen columns">
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner">
+			    <div class="item active">
+			      <img src="http://naturecleaning.ca/nivo-slider/demo/images/slide4.jpg" alt="Los Angeles">
+			    </div>
 
+			    <div class="item">
+			      <img src="http://naturecleaning.ca/nivo-slider/demo/images/slide4.jpg" alt="Chicago">
+			    </div>
+
+			    <div class="item">
+			      <img src="http://naturecleaning.ca/nivo-slider/demo/images/slide4.jpg" alt="New York">
+			    </div>
+			  </div>
+
+			  <!-- Left and right controls -->
+			  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			    <span><i class="fa-arrow-left"></i></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+			    <span><i class="fa-arrow-right"></i></span>
+			    <span class="sr-only">Next</span>
+			  </a>
 			</div>
-			<!--/Portfolio Filters -->
 
-			<!-- Portfolio Wrap -->
-			<div class="isotope" style="position: relative; overflow: hidden; height: 480px;" id="portfolio-wrap">
-
-				<!-- Portfolio Item With PrettyPhoto  -->
-				<div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   videography isotope-item">
-					<div class="portfolio-image"> <img src="img/portfolio_pic1.jpg" alt="Portfolio 1"> </div>
-					<a title="Starbucks Coffee" rel="prettyPhoto[galname]" href="http://clapat.ro/themes/newave/images/portfolio/portfolio2.jpg">
-						<div class="project-overlay">
-							<div class="project-info">
-								<div class="zoom-icon"></div>
-								<h4 class="project-name">Leica Camera</h4>
-								<p class="project-categories">Videography</p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<!--/Portfolio Item With PrettyPhoto  -->
-
-				<!-- Portfolio Item Video Expander  -->
-				<div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design isotope-item">
-					<div class="portfolio-image"> <img src="img/portfolio_pic2.jpg" alt="Portfolio 1"> </div>
-					<div class="project-overlay">
-						<div class="open-project-link"> <a class="open-project" href="http://clapat.ro/themes/newave/project-video-expander.html" title="Open Project"></a> </div>
-						<div class="project-info">
-							<div class="zoom-icon"></div>
-							<h4 class="project-name">Foto Template</h4>
-							<p class="project-categories">Design</p>
-						</div>
-					</div>
-				</div>
-				<!--/Portfolio Item Video Expander  -->
-
-				<!-- Portfolio Item Normal Expander -->
-				<div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design  isotope-item">
-					<div class="portfolio-image"> <img src="img/portfolio_pic3.jpg" alt="Portfolio 1"> </div>
-					<div class="project-overlay">
-						<div class="open-project-link"> <a class="open-project" href="http://clapat.ro/themes/newave/project-normal-expander-1.html" title="Open Project"></a> </div>
-						<div class="project-info">
-							<div class="zoom-icon"></div>
-							<h4 class="project-name">Sony Phone</h4>
-							<p class="project-categories">Design</p>
-						</div>
-					</div>
-				</div>
-				<!--/Portfolio Item Normal Expander -->
-
-				<!-- Portfolio Item FullScreen Expander -->
-				<div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  photography  branding web isotope-item">
-					<div class="portfolio-image"> <img src="img/portfolio_pic4.jpg" alt="Portfolio 1"> </div>
-					<div class="project-overlay">
-						<div class="open-project-link"> <a class="open-project" href="http://clapat.ro/themes/newave/project-fullscreen-expander-1.html" title="Open Project"></a> </div>
-						<div class="project-info">
-							<div class="zoom-icon"></div>
-							<h4 class="project-name">Nike Shoes</h4>
-							<p class="project-categories">Photography, Web, Branding</p>
-						</div>
-					</div>
-				</div>
-				<!-- Portfolio Item FullScreen Expander -->
-
-				<!-- Portfolio Item FullScreen Expander -->
-				<div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design isotope-item">
-					<div class="portfolio-image"> <img src="img/portfolio_pic5.jpg" alt="Portfolio 1"> </div>
-					<div class="project-overlay">
-						<div class="open-project-link"> <a class="open-project" href="http://clapat.ro/themes/newave/project-fullscreen-expander-2.html" title="Open Project"></a> </div>
-						<div class="project-info">
-							<div class="zoom-icon"></div>
-							<h4 class="project-name">Vinyl Record</h4>
-							<p class="project-categories">Design</p>
-						</div>
-					</div>
-				</div>
-				<!--/Portfolio Item FullScreen Expander -->
-
-				<!-- Portfolio Item Normal Expander -->
-				<div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  web isotope-item">
-					<div class="portfolio-image"> <img src="img/portfolio_pic6.jpg" alt="Portfolio 1"> </div>
-					<div class="project-overlay">
-						<div class="open-project-link"> <a class="open-project" href="http://clapat.ro/themes/newave/project-normal-expander-2.html" title="Open Project"></a> </div>
-						<div class="project-info">
-							<div class="zoom-icon"></div>
-							<h4 class="project-name">iPhone</h4>
-							<p class="project-categories">Web</p>
-						</div>
-					</div>
-				</div>
-				<!--/Portfolio Item Normal Expander -->
-
-				<!-- Portfolio Item External Project  -->
-				<div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design web isotope-item">
-					<div class="portfolio-image"> <img src="img/portfolio_pic7.jpg" alt="Portfolio 1"> </div>
-					<a href="http://clapat.ro/themes/newave/project-external-1.html" class="external">
-						<div class="project-overlay">
-							<div class="project-info">
-								<div class="zoom-icon"></div>
-								<h4 class="project-name">Nexus Phone</h4>
-								<p class="project-categories">Design, Web</p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<!--/Portfolio Item External Project  -->
-
-				<!-- Portfolio Item With PrettyPhoto  -->
-				<div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   photography isotope-item">
-					<div class="portfolio-image"> <img src="img/portfolio_pic8.jpg" alt="Portfolio 1"> </div>
-					<a title="Stereo Headphones" rel="prettyPhoto[galname]" href="http://clapat.ro/themes/newave/images/portfolio/portfolio8.jpg">
-						<div class="project-overlay">
-							<div class="project-info">
-								<div class="zoom-icon"></div>
-								<h4 class="project-name">Art Frame</h4>
-								<p class="project-categories">Photography</p>
-							</div>
-						</div>
-					</a>
-				</div>
-				<!--/Portfolio Item With PrettyPhoto  -->
-
-			</div>
-			<!--/Portfolio Wrap -->
 
 		</div>
 		<!--/Portfolio Plus Filters -->
@@ -435,22 +354,22 @@ We use Scotchgard products to prevent stains in fabric and keep your carpet and 
 
 						<div class="col-lg-4">
 							<div class="contact_block">
-								<div class="contact_block_icon icon2 rollIn animated wow"><span><i class="fa-phone"></i></span></div>
+								<div class="contact_block_icon icon2 rollIn animated "><span><i class="fa-phone"></i></span></div>
 								<span> Van: 604 255 3735 </span><span> N. Van: 604 984 6010 </span><span> Tri Cities: 604 468 7676 </span> </div>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-6 wow fadeInLeft">
+					<div class="col-lg-6 fadeInLeft">
 						<ul class="social-link">
-							<li class="twitter animated bounceIn wow delay-02s"><a href="javascript:void(0)"><i class="fa-twitter"></i></a></li>
-							<li class="facebook animated bounceIn wow delay-03s"><a href="javascript:void(0)"><i class="fa-facebook"></i></a></li>
-							<li class="pinterest animated bounceIn wow delay-04s"><a href="javascript:void(0)"><i class="fa-pinterest"></i></a></li>
-							<li class="gplus animated bounceIn wow delay-05s"><a href="javascript:void(0)"><i class="fa-google-plus"></i></a></li>
-							<li class="dribbble animated bounceIn wow delay-06s"><a href="javascript:void(0)"><i class="fa-dribbble"></i></a></li>
+							<li class="twitter animated bounceIn delay-02s"><a href="javascript:void(0)"><i class="fa-twitter"></i></a></li>
+							<li class="facebook animated bounceIn delay-03s"><a href="javascript:void(0)"><i class="fa-facebook"></i></a></li>
+							<li class="pinterest animated bounceIn delay-04s"><a href="javascript:void(0)"><i class="fa-pinterest"></i></a></li>
+							<li class="gplus animated bounceIn delay-05s"><a href="javascript:void(0)"><i class="fa-google-plus"></i></a></li>
+							<li class="dribbble animated bounceIn delay-06s"><a href="javascript:void(0)"><i class="fa-dribbble"></i></a></li>
 						</ul>
 					</div>
-					<div class="col-lg-6 wow fadeInUp delay-06s">
+					<div class="col-lg-6 fadeInUp delay-06s">
 						<div class="form">
 							<div id="sendmessage">Your message has been sent. Thank you!</div>
 							<div id="errormessage"></div>
@@ -491,40 +410,6 @@ We use Scotchgard products to prevent stains in fabric and keep your carpet and 
 			});
 
 		});
-	</script>
-	<script>
-		wow = new WOW({
-			animateClass: 'animated',
-			offset: 100
-		});
-		wow.init();
-		document.getElementById('').onclick = function() {
-			var section = document.createElement('section');
-			section.className = 'wow fadeInDown';
-			section.className = 'wow shake';
-			section.className = 'wow zoomIn';
-			section.className = 'wow lightSpeedIn';
-			this.parentNode.insertBefore(section, this);
-		};
-	</script>
-	<script type="text/javascript">
-		$(window).load(function() {
-
-			$('a').bind('click', function(event) {
-				var $anchor = $(this);
-
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top - 91
-				}, 1500, 'easeInOutExpo');
-				/*
-				if you don't want to use the easing effects:
-				$('html, body').stop().animate({
-					scrollTop: $($anchor.attr('href')).offset().top
-				}, 1000);
-				*/
-				event.preventDefault();
-			});
-		})
 	</script>
 
 	<script type="text/javascript">

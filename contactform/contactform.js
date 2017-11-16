@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
                 break;
                 
                 case 'minlen':
-                if( i.val().length<parseInt(exp) ){ ferror=ierror=true; }
+                if( i.val().length<parseInt(exp, 10) ){ ferror=ierror=true; }
                 break;
 
                 case 'email':
@@ -70,14 +70,17 @@ jQuery(document).ready(function($) {
                 break;
                 
                 case 'minlen':
-                if( i.val().length<parseInt(exp) ){ ferror=ierror=true; }
+                if( i.val().length<parseInt(exp, 10) ){ ferror=ierror=true; }
                 break;
             }
                 i.next('.validation').html( ( ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '' ) ).show('blind');
             }
         });
-        if( ferror ) return false; 
-        else var str = $(this).serialize();		
+        if (ferror) {
+            return false;
+        } else {
+            var str = $(this).serialize();
+        }		
             $.ajax({
                 type: "POST",
                 url: "contactform/contactform.php",

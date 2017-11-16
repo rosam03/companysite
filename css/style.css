@@ -7,6 +7,12 @@
 
 /* CSS Document */
 
+/* Nature Cleaning Logo Colours
+dark green: rgb(25,85,44);
+light green: rgb(50, 171, 73);
+red: rgb(176, 18, 47);
+*/
+
 /* Float Elements
 ---------------------------------*/
 .fl-lt {float:left;}
@@ -120,15 +126,24 @@ p{
 	margin:0;
 }
 
+/* Jumbo Ad Images B/W Sections */
+
+.jumbo_ad img {
+  width: 100%;
+}
+
 /* Header Styles
 ---------------------------------*/
 
 #header_outer{
 	background:#ffffff;
-	padding:30px 0px;
+	padding:20px 0px;
   position: fixed;
   z-index: 1;
   width: 100%;
+  display: block;
+  top:0;
+  max-height: 80px;
 	}
 
 .header_section{
@@ -198,19 +213,24 @@ p{
 /* Top_content
 ---------------------------------*/
 
+.numbers {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .top_cont_outer{
 	background:#f9f9f9;
 	position:relative;
-  padding-top: 15%;
+  padding-top: 80px;
 	}
 
 .top_cont_inner{
-	background:url(../img/white_pad.png) no-repeat right bottom;
+	/*background:url(../img/white_pad.png) no-repeat right bottom;*/
 	}
 
 .top_content{
 	position:relative;
-	padding-top: 50px;
 	}
 
 .white_pad{
@@ -291,6 +311,7 @@ a.learn_more2:hover{
 
 #service{
 	padding:83px 0px;
+  width: 100%;
 	}
 
 .service_area{
@@ -301,6 +322,8 @@ a.learn_more2:hover{
 	}
 
 .service_block{
+  display: block;
+  width: 100%;
 	text-align:center;
 	padding-left: 15px;
     padding-right: 15px;
@@ -373,7 +396,7 @@ a.learn_more2:hover{
 
 
 .top_cont_latest{
-	background:url(../img/dashboard_pic.png) no-repeat right bottom;
+	/*background:url(../img/dashboard_pic.png) no-repeat right bottom;*/
 }
 
 .work_pic{
@@ -392,6 +415,11 @@ a.learn_more2:hover{
 	padding:0 0 0 0;
 	font-size:14px;
 	margin-bottom:40px;
+  width: 50%;
+}
+
+#about {
+  width: 100%;
 }
 .service-list-col1{
 	float:left;
@@ -485,7 +513,9 @@ a.contact_btn:hover{
 ---------------------------------*/
 
 
-#Portfolio{ padding:100px 0px;}
+#Portfolio{
+  padding:70px 0px;
+}
 
 .Portfolio-nav{
 	padding:0;
@@ -1261,7 +1291,27 @@ img {
 
 /* Portfolio Items */
 
-	#portfolio-wrap {
+.portfolio .carousel-control{
+  height: 100%;
+}
+
+.carousel-control span {
+  display: block;
+  padding-top: 100%;
+}
+
+#myCarousel img {
+  width: 100%;
+}
+
+.carousel-control i {
+  background-color: rgb(50, 171, 73);
+  border: 1px solid rgb(50, 171, 73);
+  border-radius: 50%;
+  padding: 4%;
+}
+
+	.portfolio {
 		position: relative;
 		padding: 0;
 		width: 100%;
@@ -1269,12 +1319,13 @@ img {
 		display: block;
 	}
 
-	#portfolio-wrap .one-four {
+	.portfolio .one-four {
 		margin: 0!important;
 		line-height:0;
 		width: 25%;
 		padding: 0;
 		position:relative;
+    display: inline-block;
 	}
 
 	.portfolio-item {
