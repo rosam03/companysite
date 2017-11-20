@@ -329,6 +329,10 @@ a.learn_more2:hover{
     padding-right: 15px;
 	}
 
+  .service_block:hover {
+    background-color:#eee;
+  }
+
 .service_icon{
 	border:2px solid rgb(176, 18, 47);
 	border-radius:50%;
