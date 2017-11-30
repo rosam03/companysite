@@ -36,6 +36,14 @@
 				console.log("success");
 			}
 		})
+		$(".service_block h3").click(function(){
+			$(this).parent().children("p").toggle();
+				$(this).css("color", "inherit");
+			if($(this).parent().children("p").css('display') == "block"){
+				$(this).css("color", "rgb(176, 18, 47)");
+			}
+		});
+
 	});
 	</script>
 
@@ -191,12 +199,14 @@
 
 							</div>
 						</div>
-						<div class="service-list col-lg-6 col-sm-6">
+						<div class="col-lg-6 col-sm-6 fb">
+						</br>
+					</br>
 							<!-- Your recommendations code -->
-							<div class="fb-like" data-href="https://www.facebook.com/naturecleaningservices" data-width="320" data-layout="standard" data-action="recommend" data-size="large" data-show-faces="true" data-share="true"></div>
+							<div class="fb-like" style="display:block;" data-href="https://www.facebook.com/naturecleaningservices" data-width="300px" data-layout="standard" data-action="recommend" data-size="large" data-show-faces="true" data-share="true"></div>
 
 								<!-- Your embedded comments code -->
-							<div class="fb-comments" data-href="http://www.naturecleaning.ca" data-numposts="1" data-width="320"></div>
+							<div class="fb-comments" style="display:block;" data-href="http://www.naturecleaning.ca" data-numposts="1" data-width="100%"></div>
 						</div>
 					</div>
 				</div>
@@ -215,62 +225,45 @@
 		<div class="container">
 			<h2>Services</h2>
 			<div class="service_area">
-				<div class="row">
-					<div class="col-lg-12 col-sm-12">
+
 						<div class="service_block">
-							<div class="service_icon icon1 delay-03s animated  zoomIn"> <span><i class="fa-home"></i></span> </div>
-							<h3 class="animated fadeInUp ">Carpet cleaning</h3>
+							<h3 class="animated fadeInUp ">Carpet cleaning <span>&#9661;</span></h3>
 							<p class="animated fadeInDown ">Our truck-mounted steam-cleaning unit works effectively and quickly to remove stains and traffic from carpet. Drying times start from one hour depending on many factors including the condition and type of carpet, weather, and more. Our method of cleaning provides you with a healthy bacteria-free environment. We use a biodegradable enzyme detergent that is safe for allergy sufferers and homes with young children and pets. This non-toxic enzyme detergent quickly breaks down bacteria's and odor causing compounds.</p>
 						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-4 col-sm-4">
+
+
 						<div class="service_block">
-							<h3 class="animated fadeInUp ">Mattress cleaning</h3>
+							<h3 class="animated fadeInUp ">Mattress cleaning <span>&#9661;</span></h3>
 							<p class="animated fadeInDown ">
 								Nature Cleaning Services cleans and deodorizes mattresses to effectively remove unhealthy allergens and dirt so you can sleep comfortably. Don't let the bedbugs bite! </p>
 							</div>
-						</div>
-						<div class="col-lg-4 col-sm-4">
+
+
 							<div class="service_block">
-								<h3 class="animated fadeInUp ">Carpet and Upholstery Protector</h3>
+								<h3 class="animated fadeInUp ">Carpet and Upholstery Protector <span>&#9661;</span></h3>
 								<p class="animated fadeInDown ">
 									We use Scotchgard products to prevent stains in fabric and keep your carpet and upholstery looking the best they can. Using this protector enhances and maintains the appearance of your carpet and upholstery. </br></br> Upholstery cleaning is just as necessary as carpet cleaning. Because upholstery also collects dust and allergens, it is important to maintain their sanitation. We clean most natural and synthetic fabrics. (Cotton, linen, wool, microfiber, polyester, etc.) Sofas, armchairs, love seats, dining and office chairs, ottomans, sectional couches, and more.</p>
 								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="service_block">
-									<h3>Stain removal specialist</h3>
-									<p>Some stains are much harder to remove than others, and even harder to remove the longer they go untreated. We have been successful with nail polish, ink, wine, coffee, tea, make-up, paint, grease, tar, wax stains, and more. Avoid trying to clean the stain yourself as the chemicals in the products you use may make it harder to remove or even worsen the condition. Although we cannot guarantee the stain will be removed completely, we will try our best to remove as much of the stain as possible. We also clean serious stains: wine, vomit, urine, blood, feces, etc.</p>
+
+
+								<div class="service_block animated fadeInUp">
+									<h3>Stain removal specialist <span>&#9661;</span></h3>
+									<p class="animated fadeInDown">Some stains are much harder to remove than others, and even harder to remove the longer they go untreated. We have been successful with nail polish, ink, wine, coffee, tea, make-up, paint, grease, tar, wax stains, and more. Avoid trying to clean the stain yourself as the chemicals in the products you use may make it harder to remove or even worsen the condition. Although we cannot guarantee the stain will be removed completely, we will try our best to remove as much of the stain as possible. We also clean serious stains: wine, vomit, urine, blood, feces, etc.</p>
 								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-4 col-sm-4">
+
+
 								<div class="service_block">
-									<div class="service_icon icon1 delay-03s animated zoomIn"> <span><i class="fa-building"></i></span> </div>
-									<h3 class="animated fadeInUp ">Commercial carpet cleaning</h3>
+									<h3 class="animated fadeInUp ">Commercial carpet cleaning <span>&#9661;</span></h3>
 									<p class="animated fadeInDown ">Nature Cleaning Services also provides commercial carpet and upholstery cleaning. Our truck-mounted steam-cleaning unit does an affective job at cleaning your business environment. Have a high-rise or inconvenient area that needs to be cleaned? Not a problem, Nature Cleaning Services uses the latest portable unit that contains its own heat system to give you a superior result. Offices, restaurants, hotels, apartments, condos, strata's, and more. </p>
 								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
+
 								<div class="service_block">
-									<div class="service_icon icon2 delay-03s animated  zoomIn"> <span><i class="fa-crop"></i></span> </div>
-									<h3 class="animated fadeInUp ">Tile grout cleaning</h3>
-									<p class="animated fadeInDown ">Text here</p>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-4">
-								<div class="service_block">
-									<div class="service_icon icon1  delay-03s animated zoomIn"> <span><i class="fa-car"></i></span> </div>
-									<h3 class="animated fadeInUp ">Vehicle and boat interior</h3>
+									<h3 class="animated fadeInUp ">Vehicle and boat interior <span>&#9661;</span></h3>
 									<p class="animated fadeInDown ">Let us take care of the upholstery and carpet in your vehicle or boat. Biodegradable enzyme detergents are also used when we clean your automobile. Every ride will be more enjoyable when you know your sitting in a healthy, safe, and clean vehicle. </p>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
+
 			</section>
 			<!--Service-->
 
@@ -396,96 +389,7 @@
 			</div>
 
 		</footer>
-		<script type="text/javascript">
-		$(document).ready(function(e) {
-			$('#header_outer').scrollToFixed();
-			$('.res-nav_click').click(function() {
-				$('.main-nav').slideToggle();
-				return false
 
-			});
-
-		});
-	</script>
-
-	<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		// Portfolio Isotope
-		var container = $('#portfolio-wrap');
-
-
-		container.isotope({
-			animationEngine: 'best-available',
-			animationOptions: {
-				duration: 200,
-				queue: false
-			},
-			layoutMode: 'fitRows'
-		});
-
-		$('#filters a').click(function() {
-			$('#filters a').removeClass('active');
-			$(this).addClass('active');
-			var selector = $(this).attr('data-filter');
-			container.isotope({
-				filter: selector
-			});
-			setProjects();
-			return false;
-		});
-
-
-		function splitColumns() {
-			var winWidth = $(window).width(),
-			columnNumb = 1;
-
-
-			if (winWidth > 1024) {
-				columnNumb = 4;
-			} else if (winWidth > 900) {
-				columnNumb = 2;
-			} else if (winWidth > 479) {
-				columnNumb = 2;
-			} else if (winWidth < 479) {
-				columnNumb = 1;
-			}
-
-			return columnNumb;
-		}
-
-		function setColumns() {
-			var winWidth = $(window).width(),
-			columnNumb = splitColumns(),
-			postWidth = Math.floor(winWidth / columnNumb);
-
-			container.find('.portfolio-item').each(function() {
-				$(this).css({
-					width: postWidth + 'px'
-				});
-			});
-		}
-
-		function setProjects() {
-			setColumns();
-			container.isotope('reLayout');
-		}
-
-		container.imagesLoaded(function() {
-			setColumns();
-		});
-
-
-		$(window).bind('resize', function() {
-			setProjects();
-		});
-
-	});
-	$(window).load(function() {
-		jQuery('#all').click();
-		return false;
-	});
-</script>
-<script src="contactform/contactform.js"></script>
 
 </body>
 </html>
