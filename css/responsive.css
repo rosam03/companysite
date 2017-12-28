@@ -51,11 +51,6 @@
 	.client_profile_pic{ width:150px; height:150px;}
 	.quote_section.flt{ margin:6px 0 0 0;}
 
-
-
-
-
-
 }
 
 @media only screen and (max-width: 767px) {
@@ -157,6 +152,11 @@
     top: auto;
     width: 90%;
 	margin-left: 10%;
+}
+
+#bef-aft {
+	display: none;
+	visibility: hidden;
 }
 
 }
